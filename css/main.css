@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fee7d2;
+    text-align: center;
+    padding: 0px;
+}
+
+
+#titles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+   
+}
+
+
+
+
+
+.title-grid {
+    z-index: 1;
+    display: grid;
+}
+
+.line1, .line2, .line3, .line4 {
+    font-size: 110px;
+    font-weight: 1000;
+    color: black;
+
+}
+
+.line1, .line3 {
+    position: relative;
+    text-align: left;
+    right: 100px;
+}
+
+.line2, .line4 {
+    position: relative;
+    text-align: right;
+    left: 100px;
+}
+
+#line1{
+    position: absolute;
+    background-color: #ffccc8;
+    width: 200%;
+    height: 140px;
+    bottom: -8px;
+    right: 200px;
+    z-index: -1;
+    
+}
+
+#line2{
+    position: absolute;
+    background-color: #eacee1;
+    width: 600%;
+    height: 140px;
+    bottom: -8px;
+    left: -10px;
+    z-index: -1;
+
+}
+
+#line3{
+    position: absolute;
+    background-color: #c5e0e3;
+    width: 200%;
+    height: 140px;
+    bottom: -8px;
+    right: 50px;
+    z-index: -1;
+   
+}
+
+#line4{
+    position: absolute;
+    background-color: #fed3b5;
+    width: 600%;
+    height: 140px;
+    bottom: -8px;
+    left: 160px;
+    z-index: -1;
+  
+}
+  
+
+  
+
+
+.subtitle {
+    font-size: 1.6vw;
+    letter-spacing: 0.2em;
+    color: #444;
+    text-align: right;
+    margin-top: 2vw;
+    font-weight: 300;
+    transform: translateX(10vw);
+}
+
+
+
+
+
+
+#speakers {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    
+}
+
+
+#speakers-list {
+    display: inline-flex; 
+    justify-content: center;  
+    gap: 30px;  
+    margin-top: 20px;
+
+   
+}
+
+
+
+.speaker-name {
+    background: #000000;
+    color: #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    align-items: center;
+    margin: 0; 
+    position: relative;
+    width: 280px;
+}
+
+
+
+.speaker-name:hover {
+    background: #ffa5a5;
+    color: white;
+}
+
+
+
+
+.event {
+    color: white;
+   
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+
+}
+
+/*speaker name in event*/
+.event h3 {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: -40px;
+    padding-top: 30px;
+   
+
+}
+
+.date, .time, .location {  
+    position: relative;
+
+    font-size: 16px;
+    margin-bottom: 2px;
+    margin-left: 550px;
+    padding-left: 480px;
+    bottom: 200px;
+
+   
+  
+}
+
+.info{
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    padding: 20px;
+
+}
+
+.bio{
+    position: relative;
+    bottom: 130px;
+    left: 100px;
+}
+
+
+#info-title1{
+    font-size: 60px;
+    width: 20%;
+}
+
+#info-title2{
+    font-size: 30px;
+}
+
+#lecture-text{
+    max-width: 800px; 
+}
+
+.lecture{
+    position: relative;
+    right: 100px;
+}
+
+
+#lecture-text2{
+    max-width: 700px; 
+}
+
+#info-title1-2{
+    font-size: 60px;
+    width: 20%;
+}
+
+#info-title2-2{
+    font-size: 30px;
+}
+
+
+
+
+#lecture-text3{
+    max-width: 700px; 
+}
+
+#info-title1-3{
+    font-size: 60px;
+    width: 20%;
+}
+
+#info-title2-3{
+    font-size: 30px;
+}
+
+
+
+
+#lecture-text4{
+    max-width: 700px; 
+}
+
+#info-title1-4{
+    font-size: 60px;
+    width: 20%;
+}
+
+#info-title2-4{
+    font-size: 30px;
+}
+
+
+
+
+.info h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #000000; 
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #ffffff;
+    padding-top: 10px;
+    max-width: 400px; 
+}
+  
+
+
+.event .external_links a {
+    font-size: 14px;
+    color: #ffd3d3; 
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    z-index: 5;
+}
+
+.event .external_links a:hover {
+    text-decoration: underline;
+    color: #ff6b6b; 
+}
+
+
+
+.speaker-name.hover-highlight {
+    background-color: #ffa5a5 !important;
+    color: #ffa5a5 !important;
+    
+}
+
+.speaker-name.hover-highlight2 {
+    background-color: #c2a4d5 !important;
+    color: #c2a4d5 !important;
+    
+}
+ 
+
+.speaker-name.hover-highlight3 {
+    background-color: #8db7de !important;
+    color: #8db7de !important;
+    
+}
+
+.speaker-name.hover-highlight4 {
+    background-color: #e7915c !important;
+    color: #e7915c !important;
+    
+}
+
+
+
+#first-half{
+    position: relative;
+    align-items: right;
+    right: 150px;
+}
+
+#second-half{
+    position: relative;
+    align-items: right;
+    left: 400px;
+}
+
+#block1-1{
+    position: absolute;
+    background-color: #ffa5a5;
+    width: 75%;
+    height: 140px;
+    top: 40px;
+    
+}
+
+#block2-1{
+    position: absolute;
+    background-color: #ffa5a5;
+    width: 38%;
+    height: 140px;
+    top: 160px;
+    right: 0;
+}
+
+
+
+
+#first-half2{
+    position: relative;
+    align-items: right;
+    right: 370px;
+}
+
+#second-half2{
+    position: relative;
+    align-items: right;
+    right: 40px;
+}
+
+#block1-2{
+    position: absolute;
+    background-color: #c2a4d5;
+    width: 43%;
+    height: 140px;
+    top: 40px;
+    
+}
+
+#block2-2{
+    position: absolute;
+    background-color: #c2a4d5;
+    width: 73%;
+    height: 140px;
+    top: 160px;
+    right: 0;
+}
+
+
+
+
+
+#first-half3{
+    position: relative;
+    align-items: right;
+    right: 420px;
+}
+
+#second-half3{
+    position: relative;
+    align-items: right;
+    right: 100px;
+}
+
+#block1-3{
+    position: absolute;
+    background-color: #74d2ef;
+    width: 35%;
+    height: 140px;
+    top: 40px;
+    
+}
+
+#block2-3{
+    position: absolute;
+    background-color: #74d2ef;
+    width: 80%;
+    height: 140px;
+    top: 160px;
+    right: 0;
+}
+
+
+
+
+
+#first-half4{
+    position: relative;
+    align-items: right;
+    right: 370px;
+}
+
+#second-half4{
+    position: relative;
+    align-items: right;
+    left: 140px;
+}
+
+#block1-4{
+    position: absolute;
+    background-color: #fca56e;
+    width: 43%;
+    height: 140px;
+    top: 40px;
+    
+}
+
+#block2-4{
+    position: absolute;
+    background-color: #fca56e;
+    width: 74%;
+    height: 140px;
+    top: 160px;
+    right: 0;
+}
+
+/* SPEAKERS */
+
+
+/* maria-carolina-cambre */
+#maria-carolina-cambre {
+    background-color: #ffb9c1;
+}
+
+ffb9c1
+
+
+
+/* isabel-machado */
+#isabel-machado {
+    background-color: #dcbeeb; 
+}
+
+
+
+/* daniel-wildberger */
+#daniel-wildberger {
+    background-color: #9edaed; 
+}
+
+
+
+/* shima-rashnoodi*/
+#shima-rashnoodi {
+    background-color: #fec6a2; 
+}
+
+/*
+
+.scribble-mask{
+position: absolute;
+top: 0;
+left: 0;
+pointer-events: none;
+z-index: 2;
+}
+/*
+canvas.scribble-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+}
+
+
+
+
+
+
+/*
+
+canvas.scribble-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+}
+
+
+
+*/
