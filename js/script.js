@@ -1,15 +1,7 @@
 console.log("lets see if this remains in your code")
 
-$(document).click(function(){
 
-    $(".speaker-toggle").click(function () {
-        let targetId = $(this).data("target");
-        
-        $("#events").fadeIn();
-        $(".event").hide();
-        
-    });
-});
+//title hovering
 
 $(".line1").hover(function(){
 
@@ -18,7 +10,6 @@ $(".line1").hover(function(){
     $(".line3").css("color","#c5e0e3")
     $(".line4").css("color","#fed3b5")
     $("#speaker-name1").addClass("hover-highlight");
-    
     
 },
 
@@ -94,11 +85,10 @@ function(){
 })
 
 
-
-
-
+//changing all the background colours when the speaker name is selected
 
 $(document).ready(function() {
+    // Speaker name and the background colour
     var speakerColors = {
         "maria-carolina-cambre": "#ffb9c1",
         "isabel-machado": "#dcbeeb", 
@@ -106,33 +96,30 @@ $(document).ready(function() {
         "shima-rashnoodi": "#fec6a2" 
     };
 
-    var defaultBackgroundColor = "#fee7d2";
-    var currentSpeaker = null;  
+    // For some reason I found that using a var make the background colour elements work
+    var defaultBackgroundColor = "#fee7d2";  
+
 
     $(".speaker-name").click(function() {
-        var target = $(this).data("target"); 
+        var target = $(this).data("target");
         var color = speakerColors[target] || "#ffffff";
         
-        if (currentSpeaker === target) {
-            $("#titles").toggle();  
+        // Toggle the active class and background color
+        //https://www.sitepoint.com/jquery-toggle-live-bind/ toggling tutorial
+
+
+        if ($(this).hasClass("active-speaker")) {
             $("body").css("background-color", defaultBackgroundColor); 
             $(this).removeClass("active-speaker");
-            currentSpeaker = null;  
+            $("#titles").toggle();  
         } else {
             $(".speaker-name").removeClass("active-speaker");
-            
             $(this).addClass("active-speaker");
-            
             $("body").css("background-color", color);
-            
             $("#titles").hide();
-            
-            currentSpeaker = target;
         }
     });
 });
-
-
 
 
 
@@ -154,16 +141,19 @@ function(){
 
 
 
-//a=makes the names fade out when hovering
+//makes the speaker names fade out when hovering
 
-$(document).ready(function () {
-    $(".speaker-name").on("mouseenter", function () {
-        $(".speaker-name").not(this).stop(true, true).fadeTo(300, 0);
-    });
+$(document).ready(function() {
+    $(".speaker-name").hover(
 
-    $(".speaker-name").on("mouseleave", function () {
-        $(".speaker-name").stop(true, true).fadeTo(300, 1);
-    });
+        function() {
+            $(".speaker-name").not(this).fadeTo(300, 0);
+        },
+        function() {
+            $(".speaker-name").fadeTo(300, 1);
+
+        }
+    );
 });
 
 
@@ -171,8 +161,7 @@ $(document).ready(function () {
 
 
 
-
-
+//the background colour when hovering over the speaker names
 
 //speaker 1
 $("#speaker-name1").hover(function(){
@@ -227,6 +216,9 @@ function(){
 
 
 
+//the mouse reveal mask effect
+// a similar version of the tutorial https://www.youtube.com/watch?v=12ElqBxCZPI
+
 
 $(document).ready(function () {
     var speakerColors = {
@@ -275,15 +267,48 @@ $(document).ready(function () {
         ctx.fillRect(0, 0, width, height);
     
  
+        // based on feedback, this is the thing on the screen which would make users move their mouse towards it
+        //https://api.jquery.com/appendTo/ appending elements 
+        let box = $("<div>")
+        .addClass("center-box scale")
+        .css({
+        position: "absolute",
+        width: "50px",
+        height: "50px",
+        backgroundColor: "#000000",
+        top: "300px",
+        left: "50%",
+        zIndex: 3,
+        pointerEvents: "auto"
+    })
+        .appendTo(event);
+
+
+        //this makes the object fade out
+        box.on("mouseenter", function () {
+            $(this).fadeTo(1000, 0, function () {
+                $(this).remove();
+            });
+        });
+        
+        
+        
+    
+
         event.on("mousemove", function (e) {
             let rect = canvas[0].getBoundingClientRect();
             let x = e.clientX - rect.left,
                 y = e.clientY - rect.top;
     
+            //mouse size
             ctx.globalCompositeOperation = "destination-out";
             ctx.beginPath();
             ctx.arc(x, y, 100, 0, Math.PI * 2);
             ctx.fill();
+
+
+
+        
         });
     }
     
@@ -292,74 +317,3 @@ $(document).ready(function () {
 
 
 
-
-$("#info-title1").hover(function() {
-    // hovering
-    $("#bio-text").fadeIn();
-}, function() {
-    // not hovering
-    $("#bio-text").fadeOut();
-});
-
-$("#info-title2").hover(function() {
-    // hovering
-    $("#lecture-text").fadeIn();
-}, function() {
-    // not hovering
-    $("#lecture-text").fadeOut();
-});
-
-
-
-$("#info-title1-2").hover(function() {
-    // hovering
-    $("#bio-text2").fadeIn();
-}, function() {
-    // not hovering
-    $("#bio-text2").fadeOut();
-});
-
-$("#info-title2-2").hover(function() {
-    // hovering
-    $("#lecture-text2").fadeIn();
-}, function() {
-    // not hovering
-    $("#lecture-text2").fadeOut();
-});
-
-
-
-
-$("#info-title1-3").hover(function() {
-    // hovering
-    $("#bio-text3").fadeIn();
-}, function() {
-    // not hovering
-    $("#bio-text3").fadeOut();
-});
-
-$("#info-title2-3").hover(function() {
-    // hovering
-    $("#lecture-text3").fadeIn();
-}, function() {
-    // not hovering
-    $("#lecture-text3").fadeOut();
-});
-
-
-
-$("#info-title1-4").hover(function() {
-    // hovering
-    $("#bio-text4").fadeIn();
-}, function() {
-    // not hovering
-    $("#bio-text4").fadeOut();
-});
-
-$("#info-title2-4").hover(function() {
-    // hovering
-    $("#lecture-text4").fadeIn();
-}, function() {
-    // not hovering
-    $("#lecture-text4").fadeOut();
-});

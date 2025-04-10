@@ -35,6 +35,7 @@ body {
     font-size: 110px;
     font-weight: 1000;
     color: black;
+    cursor: default;
 
 }
 
@@ -99,13 +100,15 @@ body {
 
 
 .subtitle {
+    position: relative;
     font-size: 1.6vw;
     letter-spacing: 0.2em;
     color: #444;
     text-align: right;
     margin-top: 2vw;
     font-weight: 300;
-    transform: translateX(10vw);
+    left: 150px;
+    cursor: default;
 }
 
 
@@ -180,15 +183,13 @@ body {
 
 .date, .time, .location {  
     position: relative;
-
+    font-weight: bold;
     font-size: 16px;
     margin-bottom: 2px;
     margin-left: 550px;
-    padding-left: 480px;
+    padding-left: 500px;
     bottom: 200px;
-
-   
-  
+    cursor: default;
 }
 
 .info{
@@ -197,54 +198,69 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     padding: 20px;
-
+    cursor: default;
 }
 
 .bio{
     position: relative;
     bottom: 130px;
-    left: 100px;
+    left: 20px;
+}
+.lecture{
+    position: relative;
+    right: 100px;
+    bottom: 40px;
 }
 
 
+/*Speaker 1*/
 #info-title1{
     font-size: 60px;
     width: 20%;
 }
 
 #info-title2{
-    font-size: 30px;
+    font-size: 50px;
+    width: 150%;
 }
+
 
 #lecture-text{
-    max-width: 800px; 
-}
-
-.lecture{
-    position: relative;
-    right: 100px;
+    max-width: 1000px; 
+    width: 120%;
 }
 
 
-#lecture-text2{
-    max-width: 700px; 
+#bio-text{
+    width: 100%;
+    max-width: 500px; 
 }
 
+/*Speaker 2*/
 #info-title1-2{
     font-size: 60px;
     width: 20%;
 }
 
 #info-title2-2{
-    font-size: 30px;
+    font-size: 50px;
+    width: 120%;
+    max-width: 1200px; 
 }
 
 
-
-
-#lecture-text3{
-    max-width: 700px; 
+#lecture-text2{
+    max-width: 1000px; 
+    width: 120%;
 }
+
+
+#bio-text2{
+    width: 100%;
+    max-width: 500px; 
+}
+
+/*Speaker 3*/
 
 #info-title1-3{
     font-size: 60px;
@@ -252,15 +268,24 @@ body {
 }
 
 #info-title2-3{
-    font-size: 30px;
+    font-size: 50px;
+    width: 120%;
 }
 
 
-
-
-#lecture-text4{
-    max-width: 700px; 
+#lecture-text3{
+    max-width: 1000px; 
+    width: 120%;
 }
+
+
+#bio-text3{
+    width: 100%;
+    max-width: 500px; 
+}
+
+
+/*Speaker 4*/
 
 #info-title1-4{
     font-size: 60px;
@@ -268,7 +293,20 @@ body {
 }
 
 #info-title2-4{
-    font-size: 30px;
+    font-size: 50px;
+    width: 120%;
+}
+
+
+#lecture-text4{
+    max-width: 1000px; 
+    width: 120%;
+}
+
+
+#bio-text4{
+    width: 100%;
+    max-width: 500px; 
 }
 
 
@@ -282,7 +320,7 @@ body {
 }
 
 .info p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.4;
     margin-bottom: 10px;
     color: #ffffff;
@@ -291,21 +329,68 @@ body {
 }
   
 
-
-.event .external_links a {
-    font-size: 14px;
-    color: #ffd3d3; 
-    text-decoration: none;
-    padding: 5px;
-    display: inline-block;
+/*speaker 1*/
+.external_links a {
+    position: relative;
+    font-size: 24px;
+    color: #000000;
     margin-top: 10px;
-    z-index: 5;
+    bottom: 150px;
+    left: 100px;
 }
 
-.event .external_links a:hover {
+.external_links a:hover {
     text-decoration: underline;
-    color: #ff6b6b; 
+    color: #aa4747; 
 }
+
+/*speaker 2*/
+.external_links2 a {
+    position: relative;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 10px;
+    bottom: 450px;
+    left: 100px;
+}
+
+.external_links2 a:hover {
+    text-decoration: underline;
+    color: #815d97; 
+}
+
+/*speaker 3*/
+.external_links3 a {
+    position: relative;
+    font-size: 24px;
+    color: #000000; 
+    margin-top: 10px;
+    bottom: 250px;
+    left: 100px;
+}
+
+.external_links3 a:hover {
+    text-decoration: underline;
+    color: #437fa2; 
+}
+
+/*speaker 4*/
+
+.external_links4 a {
+    position: relative;
+    font-size: 24px;
+    color: #000000; 
+    margin-top: 10px;
+    bottom: 350px;
+    left: 100px;
+}
+
+.external_links4 a:hover {
+    text-decoration: underline;
+    color: #b36e43; 
+    
+}
+
 
 
 
@@ -340,12 +425,14 @@ body {
     position: relative;
     align-items: right;
     right: 150px;
+    cursor: default;
 }
 
 #second-half{
     position: relative;
     align-items: right;
     left: 400px;
+    cursor: default;
 }
 
 #block1-1{
@@ -373,12 +460,14 @@ body {
     position: relative;
     align-items: right;
     right: 370px;
+    cursor: default;
 }
 
 #second-half2{
     position: relative;
     align-items: right;
     right: 40px;
+    cursor: default;
 }
 
 #block1-2{
@@ -407,12 +496,14 @@ body {
     position: relative;
     align-items: right;
     right: 420px;
+    cursor: default;
 }
 
 #second-half3{
     position: relative;
     align-items: right;
     right: 100px;
+    cursor: default;
 }
 
 #block1-3{
@@ -441,12 +532,14 @@ body {
     position: relative;
     align-items: right;
     right: 370px;
+    cursor: default;
 }
 
 #second-half4{
     position: relative;
     align-items: right;
     left: 140px;
+    cursor: default;
 }
 
 #block1-4{
@@ -496,7 +589,29 @@ ffb9c1
 /* shima-rashnoodi*/
 #shima-rashnoodi {
     background-color: #fec6a2; 
+    
 }
+
+
+/* the square zooming in and out*/
+
+@keyframes pulsate {
+    0% {
+        transform: translate(-20%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-20%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-20%, -50%) scale(1);
+    }
+}
+
+.scale {
+    animation: pulsate 1s infinite ease-in-out;
+}
+
+
 
 /*
 
@@ -536,3 +651,6 @@ canvas.scribble-mask {
 
 
 */
+
+
+
