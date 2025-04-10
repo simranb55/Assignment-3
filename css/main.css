@@ -408,14 +408,14 @@ body {
  
 
 .speaker-name.hover-highlight3 {
-    background-color: #8db7de !important;
-    color: #8db7de !important;
+    background-color: #7acce4 !important;
+    color: #7acce4 !important;
     
 }
 
 .speaker-name.hover-highlight4 {
-    background-color: #e7915c !important;
-    color: #e7915c !important;
+    background-color: #fca56e !important;
+    color: #fca56e !important;
     
 }
 
@@ -508,7 +508,7 @@ body {
 
 #block1-3{
     position: absolute;
-    background-color: #74d2ef;
+    background-color: #6ed3f1;
     width: 35%;
     height: 140px;
     top: 40px;
@@ -517,7 +517,7 @@ body {
 
 #block2-3{
     position: absolute;
-    background-color: #74d2ef;
+    background-color: #6ed3f1;
     width: 80%;
     height: 140px;
     top: 160px;
